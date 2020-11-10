@@ -1,0 +1,97 @@
+body {
+  background-color: #15ad80;
+}
+.tree {
+  -webkit-transform: translateY(35px);
+  -ms-transform: translateY(35px);
+  transform: translateY(35px);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/made-with-code/tree.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+:root {
+  --theme-color: rgba(215, 133, 155, 0.7);
+}
+
+body {
+  height: 100vh;
+}
+
+body,
+.container,
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  padding: 50px;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.social {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+
+.container :hover {
+  width: 140px;
+  height: 140px;
+}
+
+.container:hover .social {
+  transition: 00.5s;
+  box-shadow: 0 0 20px var(--theme-color);
+}
+
+.container:hover .social:nth-child(1) {
+  transform: rotate(-60deg) translateY(-120px);
+}
+
+.container:hover .social:nth-child(2) {
+  transition-delay: 0.1s;
+  transform: rotate(-30deg) translateY(-120px);
+}
+
+.container:hover .social:nth-child(3) {
+  transition-delay: 0.2s;
+  transform: rotate(-0deg) translateY(-120px);
+}
+
+.container:hover .social:nth-child(4) {
+  transition-delay: 0.3s;
+  transform: rotate(30deg) translateY(-120px);
+}
+
+.container:hover .social:nth-child(5) {
+  transition-delay: 0.4s;
+  transform: rotate(60deg) translateY(-120px);
+}
+
+i {
+  transition: 0.5s;
+}
+
+.social:hover i {
+  transform: rotate(360deg);
+  color: var(--theme-color);
+}
